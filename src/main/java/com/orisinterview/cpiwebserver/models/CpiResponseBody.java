@@ -1,12 +1,22 @@
 package com.orisinterview.cpiwebserver.models;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.lang.annotation.Annotation;
 
+@Getter
+@Setter
 public class CpiResponseBody implements ResponseBody {
     private int cpiValue;
     private String notes;
+
+    public CpiResponseBody() {
+
+    }
 
     public CpiResponseBody(int cpiValue) {
         this(cpiValue, "");
