@@ -11,4 +11,8 @@ public abstract class BLSApiClient {
     public BLSApiResponseBody getBlsCPIDataForYear(String year) {
         return this.getBlsDataForYear(DEFAULT_CHAINED_CPI_ALL_URBAN_CONSUMERS, year);
     }
+
+    protected String addYear(String year, int val) {
+        return String.valueOf(Integer.valueOf(year) + val);
+    }
 }
